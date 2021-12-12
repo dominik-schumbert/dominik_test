@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import uuid from 'uuid';
+import jwt from 'jsonwebtoken';
+import db from '../lib/db.js';
+import * as userMiddleware from '../middleware/users.js';
 
-const bcrypt = require('bcryptjs');
-const uuid = require('uuid');
-const jwt = require('jsonwebtoken');
-const db = require('../lib/db.js');
-const userMiddleware = require('../middleware/users.js');
+const router = express.Router();
 
 
 router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
@@ -31,7 +31,7 @@ router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
                             });
                         } else {
                             // username is available
-                            bcrypt.hash(req.body.password, 10, (err, hash) => {
+                            bcrypt.hash(req.body.password, 10, (err: any, hash: any) => {
                                 if (err) {
                                     return res.status(500).send({
                                         msg: err
@@ -84,7 +84,7 @@ router.post('/login', (req, res, next) => {
             bcrypt.compare(
                 req.body.password,
                 result[0]['password'],
-                (bErr, bResult) => {
+                (bErr: any, bResult: any) => {
                     // wrong password
                     if (bErr) {
                         throw bErr;
@@ -128,3 +128,5 @@ router.get('/kategorien', (req, res, next) => {
 
 
 module.exports = router;
+
+export default router;
