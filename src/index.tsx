@@ -2,25 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ToDoList from './ToDoApp';
+import ToDoListApp from './ToDoApp';
 import MySql from './MySql';
 import reportWebVitals from './reportWebVitals';
-
-const todos: Todo[] = [
-  {
-    text: 'Walk the dog',
-    complete: false,
-  },
-  {
-    text: 'Write app',
-    complete: true,
-  },
-];
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <ToDoList/>
+    <ToDoListApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );
