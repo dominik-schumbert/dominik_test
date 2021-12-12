@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import * as mysql from "mysql";
 
 function TableApp(): ReactElement {
