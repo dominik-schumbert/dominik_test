@@ -1,10 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { ReactElement } from 'react';
 import './App.css';
 
 let liste: Array<string> = ["Das", "ist", "eine", "Liste"];
 
-function App() {
+function App(): ReactElement {
   return (
     <div className="App">
       <header className="App-header">
