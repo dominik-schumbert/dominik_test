@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ToDoListApp from './ToDoApp';
-import MySql from './MySql';
+import ToDoListApp from './ToDo/ToDoApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
