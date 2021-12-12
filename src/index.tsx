@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import ToDoListApp from './ToDo/ToDoApp';
 import reportWebVitals from './reportWebVitals';
+import TableApp from './database/TableApp';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <ToDoListApp/>
+    <TableApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
