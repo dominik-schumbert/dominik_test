@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import ToDoListApp from './ToDo/ToDoApp';
 import reportWebVitals from './reportWebVitals';
+import ApiTest from './APITest';
+
 /*import * as jquery from "jquery";
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -36,6 +38,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <ToDoListApp/>
+    <ApiTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
